@@ -15,7 +15,7 @@ pub struct Guess {
 impl Guess {
     pub fn new(value: i32) -> Result<Guess, Err> {
         if value < 1 || value > 100 {
-            println!("Значение догадки должно быть межу 1 и 100, получено {}.", value);
+            println!("Guess value must be between 1 and 100, obtained {}.", value);
             return Err(Err::ErrValue(value));
         }
         Ok (Guess { value })
